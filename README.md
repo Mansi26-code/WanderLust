@@ -41,7 +41,7 @@ _Wanderlust_ is a **feature-rich travel listing web application** designed to he
    http://localhost:3000
    ```
 
-   You may check the live demo of my project here: [https://bit.ly/3T0Yb0D](https://bit.ly/3T0Yb0D)
+   You may check the live demo of my project here: https://wanderlust-1-6f9v.onrender.com
 
 
 ## 📌 Upcoming Features  
