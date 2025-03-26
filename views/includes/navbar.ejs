@@ -9,9 +9,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="nav-search nav-hovernav-search-search">
-                <form class="d-flex" role="search" action="/listings/search" method="get" id="searchBox">
+                <form class="d-flex search-form" role="search" action="/listings/search" method="get" id="searchBox">
                     <input class="form-control me-2 search-inp" type="search"
-                        placeholder="Search Location | Title | Price" aria-label="Search" name="q" id="mySearchInput" />
+                        placeholder="Search Location  | Title  |  Price" aria-label="Search" name="q" id="mySearchInput" />
                     <button class="btn search-btn" type="submit" id="search">
                         <i class="fa-solid fa-magnifying-glass"></i>Search
                     </button>
@@ -44,25 +44,52 @@
                                                 home</strong></a>
                     </ul>
                 </div>
-                <div id="responsive-registration">
-                    <% if(!currUser) { %>
-                        <a class="nav-link" href="/signup"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;<b>Sign
-                                up</b></a>
-                        <a class="nav-link" href="/login"><i class="fa-solid fa-user-check"></i>&nbsp;&nbsp;<b>Log
-                                in</b></a>
-                        <% } %>
-                            <% if(currUser) { %>
-                                <h6 class="mt-1 nav-link"><b><i class="fa-solid fa-user"></i>
-                                        &nbsp; &nbsp;<%= currUser.username%>
-                                    </b></h6>
-                                <a class="nav-link" href="/logout"><i
-                                        class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;<b>Log out</b></a>
-                                <% } %>
-                                    <a class="nav-link" href="/listings/new"><i
-                                            class="fa-solid fa-circle-plus"></i>&nbsp; &nbsp;<strong>Airbnb your
-                                            home</strong></a>
-                </div>
             </div>
         </div>
     </div>
 </nav>
+
+<style>
+    .search-form {
+        background: #ffffff;
+        border-radius: 25px;
+        padding: 5px 10px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+    }
+
+    .search-inp {
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 20px;
+        width: 250px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .search-inp:focus {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.02);
+    }
+
+    .search-btn {
+        background-color: #28a745; /* Default green shade */
+        color: white;
+        border-radius: 20px;
+        padding: 8px 15px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .search-btn:hover {
+        background-color: #218838; /* Darker green shade */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+    }
+
+    .search-btn:active {
+        background-color: #1e7e34; /* Even darker on click */
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+        transform: scale(0.98);
+    }
+</style>
